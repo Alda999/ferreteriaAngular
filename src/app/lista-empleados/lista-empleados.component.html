@@ -1,0 +1,113 @@
+
+<br>
+<br>
+<br>
+<br>
+    <div class="pagetitle">
+      <h1>Bienvenido</h1>
+    
+    </div><!-- End Page Title -->
+
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+          <div class="row">       
+            <!-- Recent Sales -->
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+                <div class="card-body">
+                  <h5 class="card-title">Lista <span>| Empleados</span></h5>              
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor= "let empleado of empleados">
+                        <td>{{empleado.nombre}}</td>
+                        <td>{{empleado.apellido}}</td>
+                        <td>{{empleado.email}}</td>
+                        <td>
+                          <button (click)= "actualizarEmpleado(empleado.id)" class="btn btn-info">Editar</button>
+                          <button (click)= "eliminarEmpleado(empleado.id)" class="btn btn-danger" style="margin-left : 10px;">Eliminar</button>
+                          <button (click)= "verDetallesDelEmpleado(empleado.id)" class="btn btn-primary" style="margin-left : 10px;">Detalles</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </div>
+            </div><!-- End Recent Sales -->
+           
+          </div>
+        </div><!-- End Left side columns -->
+
+        <!-- Right side columns -->
+        <div class="col-lg-4">
+
+         
+
+          <!-- Website Traffic -->
+          <div class="card">
+            <div class="filter">
+              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                  <h6>Filter</h6>
+                </li>
+
+                <li><a class="dropdown-item" href="#">Today</a></li>
+                <li><a class="dropdown-item" href="#">This Month</a></li>
+                <li><a class="dropdown-item" href="#">This Year</a></li>
+              </ul>
+            </div>
+
+            <div class="card-body pb-0">
+              <h5 class="card-title">Otros <span>| Productos</span></h5>
+
+              <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
+
+             
+
+            </div>
+          </div><!-- End Website Traffic -->
+          <!-- Website Traffic -->
+          <div class="card">
+            <div class="filter">
+              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                  <h6>Filter</h6>
+                </li>
+
+                <li><a class="dropdown-item" href="#">Today</a></li>
+                <li><a class="dropdown-item" href="#">This Month</a></li>
+                <li><a class="dropdown-item" href="#">This Year</a></li>
+              </ul>
+            </div>
+
+            <div class="card-body pb-0">
+              <h5 class="card-title">Otros <span>| Productos</span></h5>
+
+              <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
+
+             
+
+            </div>
+          </div><!-- End Website Traffic -->
+
+
+        </div><!-- End Right side columns -->
+
+      </div>
+    </section>
+
+ 
